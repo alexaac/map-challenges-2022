@@ -1,0 +1,18 @@
+[
+  {
+    "name": "globe-airports",
+    "title": "1. Points",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " OpenFlights World Airports ✈️  ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "title": "30 Day Map Challenge 2022",
+    "type": "parent",
+    "name": "30-day-map-challenge-2022",
+    "description": " 2022 "
+  }
+]
