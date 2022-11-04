@@ -7,6 +7,8 @@ import dFragmentShader from './shaders/displacement/fragment.js';
 import firefliesVertexShader from '../../js/shaders/fireflies/vertex.js';
 import firefliesFragmentShader from '../../js/shaders/fireflies/fragment.js';
 
+const isMobile = window.innerWidth < 703;
+
 /**
  * Loaders
  */
@@ -285,11 +287,22 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 /**
  * Animate
  */
-document.addEventListener('mousemove', animateTerrain);
+if (isMobile) {
+  window.addEventListener('touchstart', animateTerrain);
+  window.addEventListener('touchmove', animateTerrain);
+} else {
+  window.addEventListener('mousemove', animateTerrain);
+}
 
 let mouseX = 0;
 function animateTerrain(event) {
-  mouseX = sizes.width - event.clientX;
+  if (isMobile) {
+    var touch = event.touches[0];
+
+    mouseX = touch.pageX;
+  } else {
+    mouseX = sizes.width - event.clientX;
+  }
 }
 
 const clock = new THREE.Clock();
@@ -304,6 +317,7 @@ const tick = () => {
   // Update material
   // sectionMeshes[0].rotation.z = -0.5 * elapsedTime;
   // console.log(mouseY * 0.0005);
+
   sectionMeshes[0].material.displacementScale = mouseX * 0.0005;
 
   // sectionMeshes.forEach((mesh) => {
