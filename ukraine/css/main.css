@@ -219,11 +219,11 @@ canvas.webgl {
 
 .content--contentWrapper h1 {
   font-family: 'Pinewood Bold', Helvetica, Arial, sans-serif;
-  font-size: 128px;
+  font-size: 200px;
   font-weight: 600;
   line-height: 80px;
   /* letter-spacing: -3px; */
-  font-size: calc(90px + 18 * (100vw - 1024px) / 104);
+  font-size: calc(90px + 20 * (100vw - 1024px) / 104);
   line-height: calc(64px + 30 * (100vw - 1024px) / 416);
   text-shadow: 0 1.5px 0 #fff, 1.5px 0 0 #fff, 0 -1.5px 0 #fff, -1.5px 0 0 #fff;
   color: #580000;
