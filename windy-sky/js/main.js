@@ -138,7 +138,7 @@ const startSequence = () => {
 
   gsap.to(meta, {
     delay: 0,
-    duration: 4,
+    duration: 10,
     '2022-10-31+h': 54 / 3,
     ease: 'linear',
     roundProps: '2022-10-31+h',
