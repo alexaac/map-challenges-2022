@@ -5,7 +5,7 @@ const splineFragmentShader = `
   uniform vec3 color;
   uniform float opacity;
 
-  // varying vec2 vUv;
+  varying vec2 vUv;
   varying vec3 vColor;
 
   vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
@@ -45,16 +45,28 @@ const splineFragmentShader = `
 
     vec3 colorA = vec3(0.500,0.141,0.912);
     vec3 colorB = vec3(1.000,0.833,0.224);
+    vec3 tempColor = vec3(0. ,1. ,1.);
     
-    // float noise1 = snoise(vUv + uTime * 0.08);
-    // float noise2 = snoise(vUv * 2. + uTime * 0.1);
+    float noise1 = snoise(vUv + uTime * 0.1);
+    float noise2 = snoise(vUv * 2. + uTime * 0.1);
 
     vec3 colorMix = vec3(1.0);
-    colorMix = mix(colorA, colorB, sin(uTime * 0.8) + 0.5);
-    // colorMix = mix(colorMix, color, noise1 * 0.6);
+    // colorMix = mix(colorA, colorB, sin(uTime * 0.8) + 0.5);
+    // colorMix = mix(colorMix, tempColor, noise2 * 0.6);
+    // // colorMix = mix(colorA, colorB,  noise2 * 2.0);
+    colorMix = mix(vColor, tempColor,  .5);
 
+    // gl_FragColor = vec4(  colorMix, opacity );
     // gl_FragColor = vec4( vColor * colorMix, opacity );
-    gl_FragColor = vec4( vColor , opacity );
+    // // gl_FragColor = vec4( vColor , opacity );
+
+    float dash = sin(vUv.x * 100. - uTime);
+
+    if (dash < 0.) discard;
+
+
+    // gl_FragColor = vec4( mix(vec3(vUv.x , 0., 0.), vColor , 0.9), 1. );
+    gl_FragColor = vec4( mix(vec3(vUv.x , 0., 0.), colorMix , 0.9), 1. );
   }
 `;
 

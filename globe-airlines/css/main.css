@@ -239,7 +239,7 @@ p {
 
 .content--gridContainer {
   width: 84.44444%;
-  max-width: 1216px;
+  /* max-width: 1216px; */
   /* margin: 0 auto; */
   position: relative;
   height: 100%;
@@ -260,8 +260,8 @@ p {
   font-weight: 600;
   line-height: 80px;
   /* letter-spacing: -3px; */
-  font-size: calc(70px + 18 * (100vw - 1024px) / 416);
-  line-height: calc(64px + 30 * (100vw - 1024px) / 416);
+  font-size: calc(50px + 18 * (100vw - 1024px) / 416);
+  line-height: calc(44px + 30 * (100vw - 1024px) / 416);
   color: #fff;
   /* text-shadow: 0 1.5px 0 #fff, 1.5px 0 0 #fff, 0 -1.5px 0 #fff, -1.5px 0 0 #fff; */
 }
@@ -304,7 +304,7 @@ p {
   display: flex;
   justify-content: space-between;
   width: 84.44444%;
-  max-width: 1216px;
+  /* max-width: 1216px; */
   margin: 0 auto;
   padding: 48px 0 0;
 }

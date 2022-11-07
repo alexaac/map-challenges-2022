@@ -23,7 +23,7 @@ const shiftBottomPercent = isMobile ? 0.5 : 0.1;
 const cameraZoom = isMobile ? 35 : 18;
 
 const CURVE_SEGMENTS = 44;
-const DEFAULT_TUBE_RADIUS = 0.0055;
+const DEFAULT_TUBE_RADIUS = 0.015;
 const TUBE_RADIUS_SEGMENTS = 8;
 const GLOBE_RADIUS = 5.5;
 const DEGREE_TO_RADIAN = Math.PI / 180;
@@ -214,7 +214,7 @@ const dataAirline = await getData('data/routes.dat');
 let airports = formatAirportData(dataAirport);
 // console.log(airports.splice(0, 10));
 let airportsPlusAirlines = formatAirlineData(dataAirline, airports);
-document.querySelector('#airport-no').innerHTML = Object.keys(airports).length;
+// document.querySelector('#airport-no').innerHTML = Object.keys(airports).length;
 console.log(Object.keys(airports).length);
 
 // Particles
@@ -236,21 +236,10 @@ function calcPosFromLatLonRad(lat, lon, radius) {
   );
 }
 
-function coordinateToPosition(lat, lng, radius) {
-  const phi = (90 - lat) * DEGREE_TO_RADIAN;
-  const theta = (lng + 180) * DEGREE_TO_RADIAN;
-
-  return new THREE.Vector3(
-    -radius * Math.sin(phi) * Math.cos(theta),
-    radius * Math.cos(phi),
-    radius * Math.sin(phi) * Math.sin(theta)
-  );
-}
-
 const markerCount = Object.keys(airportsPlusAirlines).length;
 let markerInfo = []; // information on markers
 
-let gMarker = new THREE.PlaneGeometry(0.03, 0.03);
+let gMarker = new THREE.PlaneGeometry(0.08, 0.08); // point size
 
 // Material
 const mMarker = new THREE.MeshBasicMaterial({
@@ -426,8 +415,8 @@ let controls = new OrbitControls(camera, canvas);
 controls.minDistance = 9;
 controls.maxDistance = 20;
 controls.enableDamping = true;
-controls.autoRotate = false;
-controls.autoRotateSpeed *= 0.25;
+controls.autoRotate = true;
+controls.autoRotateSpeed *= 0.8;
 
 // controls.enablePan = false;
 // controls.minDistance = 6;
@@ -525,7 +514,8 @@ const splineMaterial = new THREE.ShaderMaterial({
   uniforms: globalUniforms,
   vertexShader: splineVertexShader,
   fragmentShader: splineFragmentShader,
-  wireframe: true,
+  // wireframe: true,
+  transparent: true,
 });
 
 function getCurve(coords) {
@@ -563,7 +553,7 @@ function getCurve(coords) {
   for (let i = 0, l = customColor.count; i < l; i++) {
     // color.setHSL(i / l, 0.5, 0.5);
     // color.setHSL(i / l, 0.5, 0.5);
-    color.setHSL(i / l, 0.3, 0.5);
+    color.setHSL(i / l, 1.0, 0.7);
 
     color.toArray(customColor.array, i * customColor.itemSize);
   }
@@ -584,11 +574,11 @@ function getCurve(coords) {
       const timeElapsed = performance.now() - startTime;
 
       // Animate the curve for 2.5 seconds
-      const progress = timeElapsed / 5000;
+      const progress = timeElapsed / 8000;
       // console.log('progress ', progress);
 
       // Arcs are made up of roughly 3000 vertices
-      drawRangeCount = (reverse ? 1 - progress : progress) * 3000;
+      drawRangeCount = (reverse ? 1 - progress : progress) * 5000;
       // console.log(drawRangeCount);
 
       if (progress < 0.999) {
@@ -600,13 +590,14 @@ function getCurve(coords) {
           startTime = performance.now();
 
           // console.log('-------------------------');
-          splineGeometry.setDrawRange(0, 3000);
+          splineGeometry.setDrawRange(0, 5000);
           drawDirectedAnimatedLine({ reverse: true });
         } else {
-          console.log('------------------0000000000000000000');
+          // console.log('------------------0000000000000000000');
           setTimeout(function () {
             splinesGroup.remove(splines);
-          }, 100);
+            document.querySelector('#airport-name').innerHTML = '';
+          }, 500);
         }
       }
     };
@@ -641,10 +632,10 @@ const handleMove = (x, y, isClick) => {
   if (intersects[0]) {
     // splinesGroup.remove(splines);
 
-    for (var i = splinesGroup.children.length - 1; i >= 0; i--) {
-      const obj = splinesGroup.children[i];
-      splinesGroup.remove(obj);
-    }
+    // for (var i = splinesGroup.children.length - 1; i >= 0; i--) {
+    //   const obj = splinesGroup.children[i];
+    //   splinesGroup.remove(obj);
+    // }
 
     currentIntersect = intersects[0];
 
@@ -653,7 +644,7 @@ const handleMove = (x, y, isClick) => {
       let currentAirport = markerInfo[iid];
       let mi = currentAirport.properties;
 
-      document.querySelector('#airport-no').innerHTML = mi['Name'];
+      document.querySelector('#airport-name').innerHTML = mi['Name'];
 
       if (isClick) {
         // console.log(currentAirport);
@@ -732,12 +723,14 @@ if (isMobile) {
  * Animate
  */
 const clock = new THREE.Clock();
+let time = 0;
 
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
   // Update material
-  globalUniforms.uTime.value = elapsedTime;
+  time += 0.3;
+  globalUniforms.uTime.value = time;
   // globalUniforms.color.value.offsetHSL(0.0005, 0, 0);
 
   controls.update();
