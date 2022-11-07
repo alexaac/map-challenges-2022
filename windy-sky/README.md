@@ -8,7 +8,7 @@ Global Wind Power Forecast 🌬️
 
 ### Demo
 
-[https://maptheclouds.com/playground/30-day-map-challenge-2022/globe-airports/](https://maptheclouds.com/playground/30-day-map-challenge-2022/globe-airports/)
+[https://maptheclouds.com/playground/30-day-map-challenge-2022/windy-sky/](https://maptheclouds.com/playground/30-day-map-challenge-2022/windy-sky/)
 
 ### Description
 
