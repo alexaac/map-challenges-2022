@@ -416,7 +416,7 @@ controls.minDistance = 9;
 controls.maxDistance = 20;
 controls.enableDamping = true;
 controls.autoRotate = true;
-controls.autoRotateSpeed *= 0.8;
+controls.autoRotateSpeed *= 0.9;
 
 // controls.enablePan = false;
 // controls.minDistance = 6;
