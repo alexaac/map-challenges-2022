@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta charset="UTF-8" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#30DayMapChallenge 2022 Day 7. Raster</title>
+
+    <meta property="og:title" content="#30DayMapChallenge 2022 Day 7. Raster" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/windy-sky"
+    />
+    <meta property="og:description" content="#30DayMapChallenge on Twitter" />
+    <meta property="article:publisher" content="https://maptheclouds.com" />
+    <meta property="article:section" content="Graphic" />
+    <meta property="article:tag" content="Graphic" />
+    <meta
+      property="og:image"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/windy-sky/img/og_1400_900.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="900" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:image"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/windy-sky/img/og_1400_900.png"
+    />
+    <meta property="twitter:site" content="@maptheclouds" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js" integrity="sha512-0bzaetZStCnsUgbCtGVxftzF/L32PNOnrMlYLXwBOKl8cUjTSSDfJVyyJsNwGoI0iE0WUqni2eEfO35kJjFj5g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  </head>
+
+  <body>
+    <div class="nav--navigation">
+      <div class="nav--gridContainer">
+        <div class="nav--logo">
+          <h4>#30DayMapChallenge 2022</h4>
+          <div class="content--count">
+            <span>07</span>
+            <span style="background-color: rgb(212, 212, 230);"></span>
+            <span>30</span>
+          </div>
+        </div>
+        <div class="nav--navMenu" role="button" tabindex="0">
+          <h3>Day 7. Raster</h3>
+        </div>
+      </div>
+    </div>
+    <canvas class="coastline" id="coastline"></canvas>
+    <canvas class="webgl" id="webgl"></canvas>
+    <div class="main--contentWrapper no-pointer-events">
+      <div class="content--page" style="color: rgb(41, 22, 16);">
+        <div class="content--fixedPageContent" style="transform: translate3d(0px, 0px, 0px)"><div class="content--gridContainer">
+          <div class="content--contentWrapper">
+          <h1>Global Wind Power</h1>
+          <div class="content--subCopy">
+            <div>
+              <p>The Global Forecast System (GFS) is a National Centers for Environmental Prediction (NCEP) weather forecast model.
+              </p>
+              <p>
+                Here's an animation of wind power generated using the WebGL Wind library, created by Volodymyr Agafonkin.
+              </p>
+              <p>
+                Parameters: 0.50 degree grid, the 31st of October, 100 m above ground, 3 to 3 hours.
+              </p>
+              <p>
+                Current file: <strong><span id="file-name"></span></strong>. Use the button to play all days again.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div></div>
+
+    
+    <div class="side-pannel side-pannel--left">
+      <div class="control control-group">
+          <a id="animate" class="play-icon hidden" href="#" title="Play all days"></a>
+          <a id="stop-animation" class="pause-icon" href="#" title="Stop Animation"></a>
+      </div>
+    </div>
+
+    <div id="markerLabel" class="hidden">
+      <button id="closeButton">X</button>
+      <div class="text" id="idNum"></div>
+      <div class="text" id="magnitude"></div>
+      <div class="text" id="coordinates"></div>
+    </div>
+
+
+    <div class="below">
+      <div>
+        <strong>Data: </strong> 
+        <a href="https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p50.pl?dir=%2Fgfs.20221031%2F00%2Fatmos">NCEP GFS Forecasts</a>
+      </div>
+      <div>
+        <strong>Library: </strong>
+        <a href="github.com/mapbox/webgl-wind">WebGL Wind</a>
+      </div>
+      <div>
+        <strong>Graphic: </strong> @maptheclouds
+      </div>
+    </div>
+
+    <script type="module" src="./js/wind-gl.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    
+  </body>
+</html>
