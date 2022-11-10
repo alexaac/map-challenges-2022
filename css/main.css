@@ -337,6 +337,10 @@ a.btn:disabled {
   background-image: url(../icons/pause.svg);
 }
 
+.circles-icon {
+  background-image: url(../icons/circles.svg);
+}
+
 .below {
   position: absolute;
   bottom: 5px;

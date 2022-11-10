@@ -2,7 +2,7 @@
 
 ### Project
 
-#30DayMapChallenge on Twitter - 2021 experiments
+#30DayMapChallenge on Twitter - 2022 experiments
 
 ### Gallery
 
