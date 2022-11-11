@@ -12,13 +12,7 @@ Funky City 🏙️
 
 ### Description
 
-OpenFlights Airports Database contains over 10,000 airports, train stations and ferry terminals spanning the globe.
-
-Feel free to query all 8000+ airports on this map.
-
 ### Data sources
-
-[OpenFlights Airports Database](https://openflights.org/data.html)
 
 ### Inspiration
 

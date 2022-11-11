@@ -217,7 +217,7 @@ p {
   font-size: 88px;
   font-weight: 600;
   line-height: 80px;
-  color: #1b1b1f;
+  color: #1f1b1d;
   /* letter-spacing: -3px; */
   font-size: calc(70px + 18 * (100vw - 1024px) / 416);
   line-height: calc(64px + 20 * (100vw - 1024px) / 416);
