@@ -51,8 +51,8 @@ loadingManager.onError = (err) => {
 };
 
 const textureLoader = new THREE.TextureLoader(loadingManager);
-const height = textureLoader.load('./assets/textures/globe_cj_height2.png');
-const texture = textureLoader.load('./assets/textures/globe_cj_texture2.png');
+const height = textureLoader.load('./assets/textures/globe_cj_height3.png');
+const texture = textureLoader.load('./assets/textures/globe_cj_texture3.png');
 
 /**
  * Base

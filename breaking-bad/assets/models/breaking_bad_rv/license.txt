@@ -1,0 +1,11 @@
+Model Information:
+* title:	Breaking Bad RV
+* source:	https://sketchfab.com/3d-models/breaking-bad-rv-ad25d5406ce74feb867c346f873925c6
+* author:	HugoLandin (https://sketchfab.com/HugoLandin)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Breaking Bad RV" (https://sketchfab.com/3d-models/breaking-bad-rv-ad25d5406ce74feb867c346f873925c6) by HugoLandin (https://sketchfab.com/HugoLandin) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
