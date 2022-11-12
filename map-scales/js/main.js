@@ -16,9 +16,9 @@ const textureLoader = new THREE.TextureLoader();
 /**
  * Textures
  */
-const height1 = textureLoader.load('./assets/textures/ro_height.png');
-const height2 = textureLoader.load('./assets/textures/ro_height2.png');
-const height3 = textureLoader.load('./assets/textures/ro_height3.png');
+// const height1 = textureLoader.load('./assets/textures/ro_height.png');
+// const height2 = textureLoader.load('./assets/textures/ro_height2.png');
+// const height3 = textureLoader.load('./assets/textures/ro_height3.png');
 const tex1 = textureLoader.load('./assets/textures/ro_texture.png');
 const tex2 = textureLoader.load('./assets/textures/ro_texture2.png');
 const tex3 = textureLoader.load('./assets/textures/ro_texture3.png');
@@ -195,7 +195,7 @@ const startSequence = () => {
   globalUniforms.texture2.value = tex2;
 
   gsap.to(parameters, {
-    delay: 4,
+    delay: 3,
     stateStep: 1,
     duration: 4,
     onUpdate: () => {
