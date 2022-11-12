@@ -195,9 +195,9 @@ const startSequence = () => {
   globalUniforms.texture2.value = tex2;
 
   gsap.to(parameters, {
-    delay: 3,
+    delay: 2,
     stateStep: 1,
-    duration: 4,
+    duration: 3,
     onUpdate: () => {
       if (!running) {
         parameters.state =
@@ -224,7 +224,7 @@ const startSequence = () => {
         gsap.to(parameters, {
           delay: 1,
           stateStep: 1,
-          duration: 4,
+          duration: 3,
           onUpdate: () => {
             globalUniforms.texture2.value = tex3;
             globalUniforms.texture1.value = tex2;
