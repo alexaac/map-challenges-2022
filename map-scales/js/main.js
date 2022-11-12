@@ -137,7 +137,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.x = 0;
 camera.position.y = 0;
-camera.position.z = 2;
+camera.position.z = 1.8;
 
 scene.add(camera);
 
@@ -195,7 +195,7 @@ const startSequence = () => {
   globalUniforms.texture2.value = tex2;
 
   gsap.to(parameters, {
-    delay: 3,
+    delay: 4,
     stateStep: 1,
     duration: 4,
     onUpdate: () => {

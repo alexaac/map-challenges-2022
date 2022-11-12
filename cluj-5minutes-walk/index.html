@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta charset="UTF-8" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#30DayMapChallenge 2022 Day 13. 5 minute map</title>
+
+    <meta property="og:title" content="#30DayMapChallenge 2022 Day 13. 5 minute map" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/cluj-5minutes-walk"
+    />
+    <meta property="og:description" content="#30DayMapChallenge on Twitter" />
+    <meta property="article:publisher" content="https://maptheclouds.com" />
+    <meta property="article:section" content="Graphic" />
+    <meta property="article:tag" content="Graphic" />
+    <meta
+      property="og:image"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/cluj-5minutes-walk/img/og_1400_900.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="900" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:image"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/cluj-5minutes-walk/img/og_1400_900.png"
+    />
+    <meta property="twitter:site" content="@maptheclouds" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-contextmenu/1.4.0/leaflet.contextmenu.css"
+    />
+
+    <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
+    <script type="module" src="./js/ors-js-client.js"></script>
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+ 
+  </head>
+
+  <body>
+    <div class="nav--navigation">
+      <div class="nav--gridContainer">
+        <div class="nav--logo">
+          <h4>#30DayMapChallenge 2022</h4>
+          <div class="content--count">
+            <span>13</span>
+              <span style="background-color: #000000; "></span>
+            <span>30</span>
+          </div>
+        </div>
+        <div class="nav--navMenu" role="button" tabindex="0">
+          <h3>Day 13. 5 minute map</h3>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+    <div id="isochrones"></div>
+    <div class="main--contentWrapper no-pointer-events">
+      <div class="content--page"">
+        <div class="content--fixedPageContent">
+          <div class="content--gridContainer">
+            <div class="content--contentWrapper">
+              <h1>Cluj-Napoca 5minutes walk</h1>
+              <div class="content--subCopy">
+                <div>
+                  <p>
+                    Right click on the map to get 5, 10, 15, 20, 25, 30 minutes walk isochrones.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="below">
+      <div>
+        Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.
+      </div>
+      <div>
+        Isochrones API: <a href="https://openrouteservice.org/" target="_blank">
+          Openrouteservice</a>
+      </div>
+
+      <div>
+        <strong>Graphic: </strong> @maptheclouds
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-contextmenu/1.4.0/leaflet.contextmenu.js"></script>
+
+    <script type="module" src="./js/main.js"></script>
+    
+  </body>
+</html>

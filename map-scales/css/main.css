@@ -234,7 +234,7 @@ canvas#webgl {
 
 .content--subCopy {
   margin: 80px 0 0;
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
