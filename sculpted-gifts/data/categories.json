@@ -1,0 +1,19 @@
+[
+  {
+    "name": "cj",
+    "title": "Cluj Forests 🌳🌲🌳",
+    "type": "child",
+    "parent": "dataviz",
+    "icon": "",
+    "description": " Cluj County, România map with a focus on forests ",
+    "examples": [],
+    "finished": true
+  },
+
+  {
+    "title": "MapTheClouds Maps",
+    "type": "parent",
+    "name": "dataviz",
+    "description": " MapTheClouds Playground "
+  }
+]
