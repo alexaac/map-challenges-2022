@@ -81,7 +81,7 @@ const canvas = document.querySelector('canvas.webgl');
 const scene = new THREE.Scene();
 
 // https://svs.gsfc.nasa.gov/3895
-const stars = '../../assets/textures/starmap_4k.jpg';
+const stars = './assets/textures/starmap_4k.jpg';
 
 const backgroundMap = textureLoader.load(stars);
 backgroundMap.mapping = THREE.EquirectangularReflectionMapping;
