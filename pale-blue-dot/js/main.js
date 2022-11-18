@@ -228,7 +228,7 @@ meshGroup.add(earthGlobe);
 normalMapWater.repeat.set(2, 1).multiplyScalar(4);
 
 var geometry = new THREE.SphereGeometry(GLOBE_RADIUS, 128, 64);
-
+// https://alteredqualia.com/xg/examples/earth_bathymetry.html
 var waterMaterial = new THREE.MeshPhongMaterial({
   color: 0x000000,
   specular: 0x111111,

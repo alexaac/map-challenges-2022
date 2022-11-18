@@ -18,6 +18,8 @@ Pale Blue Dot
 
 ### Inspiration
 
+[AlteredQualia](https://alteredqualia.com/xg/examples/earth_bathymetry.html)
+
 ### TODO
 
 TODO
