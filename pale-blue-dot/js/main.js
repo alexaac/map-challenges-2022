@@ -9,7 +9,7 @@ const GLOBE_RADIUS = 5;
 const isMobile = window.innerWidth < 703;
 const shiftRightPercent = 0; //isMobile ? 0 : 0.4;
 const shiftBottomPercent = 0; // isMobile ? 0.5 : 0.1;
-const cameraZoom = isMobile ? 15 : 15;
+const cameraZoom = isMobile ? 15 : 12;
 
 const sections = document.querySelectorAll('.content--fixedPageContent');
 gsap.to(sections[0], {
