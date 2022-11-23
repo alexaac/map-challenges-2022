@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta charset="UTF-8" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <base target="_blank">
+    <title>#30DayMapChallenge 2022 Day 21. Data - Kontur Population Dataset</title>
+
+    <meta property="og:title" content="#30DayMapChallenge 2022 Day 21. Data - Kontur Population Dataset" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/romania-hex"
+    />
+    <meta property="og:description" content="#30DayMapChallenge on Twitter" />
+    <meta property="article:publisher" content="https://maptheclouds.com" />
+    <meta property="article:section" content="Graphic" />
+    <meta property="article:tag" content="Graphic" />
+    <meta
+      property="og:image"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/romania-hex/img/og_1400_900.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="900" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:image"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/romania-hex/img/og_1400_900.png"
+    />
+    <meta property="twitter:site" content="@maptheclouds" />
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script src="./threejs/three.min.js"></script>
+    <script src="./threejs/OrbitControls.js"></script>
+    <script src="./Qgis2threejs.js"></script>
+  </head>
+
+  <body>
+    <div class="nav--navigation">
+      <div class="nav--gridContainer">
+        <div class="nav--logo">
+          <h4>#30DayMapChallenge 2022</h4>
+          <!-- <div class="content--count">
+            <span>21</span>
+            <span style="background-color: rgb(255, 255, 255);"></span>
+            <span>30</span>
+          </div> -->
+          <div class="nav--navMenu" role="button" tabindex="0">
+            <h3>Day 21. Data - Kontur Population Dataset</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <canvas class="webgl grabbable" id="webgl"></canvas>
+    <img class="legend" src="./assets/textures/legend.png" alt="" srcset="">
+
+    <div class="main--contentWrapper no-pointer-events">
+      <div class="content--page" style="color: rgb(41, 22, 16);">
+        <div class="content--fixedPageContent">
+          <div class="content--gridContainer">
+            <div class="content--contentWrapper">
+              <h1>Romania - Population Density</h1>
+              <div class="content--subCopy">
+                <div>
+                  <p>Population Density for 400m H3 Hexagons. Values represent number of people in cell. Release 2022-06-30.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="below">
+      <div>
+        <strong>Data: </strong><a href="https://data.humdata.org/dataset/kontur-population-dataset" target="_blank">Kontur Population</a>
+      </div>
+      <div>
+        <strong>Soft: </strong><a href="https://github.com/minorua/Qgis2threejs">Qgis2threejs</a> 
+      </div>
+      <div>
+        <strong>Graphic: </strong> @maptheclouds
+      </div>
+    </div>
+    
+    <div id="view">
+      <div id="northarrow"></div>
+      <div id="navigation"></div>
+    </div>
+    
+    <!-- popup -->
+    <div id="popup">
+      <div id="closebtn">&times;</div>
+      <div id="popupbar"></div>
+      <div id="popupbody">
+        <div id="popupcontent"></div>
+    
+        <!-- query result -->
+        <div id="queryresult">
+          <table id="qr_coords_table">
+            <caption>Clicked coordinates <div id="zoomtopoint" class="action-zoom zoombtn"></div></caption>
+            <tr><td id="qr_coords"></td></tr>
+          </table>
+    
+          <table id="qr_layername_table">
+            <caption>Layer <div id="zoomtolayer" class="action-zoom zoombtn"></div></caption>
+            <tr><td id="qr_layername"></td></tr>
+          </table>
+    
+          <table id="qr_attrs_table">
+            <caption>Attributes</caption>
+          </table>
+    
+          <!-- camera actions and measure tool -->
+          <div id="orbitbtn" class="action-btn action-orbit">Orbit</div>
+          <div id="measurebtn" class="action-btn">Measure distance</div>
+        </div>
+    
+        <!-- page info -->
+        <div id="pageinfo">
+          <h1>Current View URL</h1>
+          <div><input id="urlbox" type="text"></div>
+    
+          <h1>Usage</h1>
+          <table id="usage">
+            <tr><td colspan="2" class="star">Mouse</td></tr>
+            <tr><td>Left button + Move</td><td>Orbit</td></tr>
+            <tr><td>Mouse Wheel</td><td>Zoom</td></tr>
+            <tr><td>Right button + Move</td><td>Pan</td></tr>
+    
+            <tr><td colspan="2" class="star">Keys</td></tr>
+            <tr><td>Arrow keys</td><td>Move Horizontally</td></tr>
+            <tr><td>Shift + Arrow keys</td><td>Orbit</td></tr>
+            <tr><td>Ctrl + Arrow keys</td><td>Rotate</td></tr>
+            <tr><td>Shift + Ctrl + Up / Down</td><td>Zoom In / Out</td></tr>
+            <tr><td>L</td><td>Toggle Label Visibility</td></tr>
+            <tr><td>R</td><td>Start / Stop Orbit Animation</td></tr>
+            <tr><td>W</td><td>Wireframe Mode</td></tr>
+            <tr><td>Shift + R</td><td>Reset Camera Position</td></tr>
+            <tr><td>Shift + S</td><td>Save Image</td></tr>
+          </table>
+    
+          <h1>About</h1>
+          <div id="about"><img src="./Qgis2threejs.png">
+            This page was made with <a href="https://www.qgis.org/">QGIS</a> and <a href="https://github.com/minorua/Qgis2threejs">Qgis2threejs</a> plugin (version 2.7.1).
+            <div>Powered by <a href="https://threejs.org/">three.js</a>
+            <span id="lib_proj4js"> and <a href="https://trac.osgeo.org/proj4js/">Proj4js</a></span>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- progress bar -->
+    <div id="progress"><div id="progressbar"></div></div>
+    
+    <!-- menu -->
+    <div id="toolbtns">
+      <div id="layerbtn"></div>
+      <div id="animbtn" class="hidden"></div>
+      <div id="infobtn"></div>
+    </div>
+    
+    <!-- header and footer -->
+    <div id="header"></div>
+    <div id="footer"></div>
+    
+    <!-- layer panel -->
+    <div id="layerpanel">
+      <div id="layerlist"></div>
+    </div>
+    
+    <!-- animation -->
+    <div id="narrativebox" class="ef1">
+      <div id="narbody">
+    
+      </div>
+      <div id="nextbtn"></div>
+    </div>
+    
+    <script>
+    // Q3D.Config.allVisible = true;
+    // Q3D.Config.bgColor = 0x000000;
+    // Q3D.Config.localMode = true;
+    
+    console.log(Q3D.application)
+    // var container = document.getElementById("view"),
+    //     app = Q3D.application,
+    //     gui = Q3D.gui;
+    
+    // app.init(container);       // initialize viewer
+    
+    // // load the scene
+    // app.loadSceneFile("./data/index/scene.js", function (scene) {
+    //   // scene file has been loaded
+    //   app.start();
+    // }, function (scene) {
+    //   // all relevant files have been loaded
+    
+    // });
+    </script>
+
+<script>
+  Q3D.Config.allVisible = true;
+  Q3D.Config.bgColor = 0x000000;
+  Q3D.Config.localMode = true;
+  
+  var container = document.getElementById("view"),
+      app = Q3D.application,
+      gui = Q3D.gui;
+  
+  app.init(container);       // initialize viewer
+  
+  // load the scene
+  app.loadSceneFile("./data/index/scene.js", function (scene) {
+    // scene file has been loaded
+    // app.start();
+    // console.log(app.camera.position)
+  }, function (scene) {
+    // all relevant files have been loaded
+  
+  });
+  </script>
+
+    <!-- <script type="module" src="./js/main.js"></script> -->
+    
+  </body>
+</html>
