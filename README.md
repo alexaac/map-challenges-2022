@@ -4,6 +4,8 @@
 
 #30DayMapChallenge on Twitter - 2022 experiments
 
+Do not use in production :D
+
 ### Gallery
 
 https://maptheclouds.com/playground/30-day-map-challenge-2022/metamapping/
