@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta charset="UTF-8" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#30DayMapChallenge 2022 Day 23. Movement</title>
+
+    <meta property="og:title" content="#30DayMapChallenge 2022 Day 23. Movement" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/corgi-routes"
+    />
+    <meta property="og:description" content="#30DayMapChallenge on Twitter" />
+    <meta property="article:publisher" content="https://maptheclouds.com" />
+    <meta property="article:section" content="Graphic" />
+    <meta property="article:tag" content="Graphic" />
+    <meta
+      property="og:image"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/corgi-routes/img/og_1400_900.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="900" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:image"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/corgi-routes/img/og_1400_900.png"
+    />
+    <meta property="twitter:site" content="@maptheclouds" />
+
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <link
+      href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+ 
+  </head>
+
+  <body>
+    <div class="nav--navigation">
+      <div class="nav--gridContainer">
+        <div class="nav--logo">
+          <h4>#30DayMapChallenge 2022 Day 23. Movement</h4>
+          <!-- <div class="content--count">
+            <span>22</span>
+              <span style="background-color: #000000; "></span>
+            <span>30</span>
+          </div> -->
+        </div>
+        <div class="nav--navMenu" role="button" tabindex="0">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="side-pannel-left">
+      <div class="control control-group">
+          <a id="play-cases" class="play-icon hide" href="#" title="Play"></a>
+          <a id="pause-cases" class="pause-icon " href="#" title="Pause"></a>
+      </div>
+    </div>
+
+    <select id="case-select" class="case-select">
+      <option selected value="savadisla">Savadisla</option>
+      <option value="covasna">Covasna</option>
+      <option value="sinaia">Sinaia</option>
+    </select>
+
+    <div id="map" class="map"></div>
+    <div id="chart" class="chart"></div>
+
+    <div class="file">
+      <label for="file-input" class="file-label">Browse gpx</label>
+      <input id="file-input" class="file-input" type="file" />
+      <!-- <h3>Contents of the file:</h3> -->
+      <pre id="file-content"></pre>
+    </div>
+
+    <input type="hidden" id="language" name="language" value="en">
+    <input type="hidden" id="min-x" name="min-x" value="">
+    <input type="hidden" id="max-x" name="max-x" value="">
+
+    <div class="main--contentWrapper no-pointer-events">
+      <div class="content--page"">
+        <div class="content--fixedPageContent">
+          <div class="content--gridContainer">
+            <div class="content--contentWrapper">
+              <h1>Corgi Routes</h1>
+              <div class="content--subCopy">
+                <div>
+                  <p>
+                    Enjoy the beautiful Corgi views from this nice trip.
+                  </p>
+                  <p>Drag and drop your own gpx file to explore it. (maybe it works)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="below">
+      <div>
+        Data: <a href="https://www.alltrails.com/explore/recording/bike-savadisla-valea-plescuta-culme-relee-lita-lita-savadisla-2017-09-30" target="_blank">route 1</a>, <a href="https://www.alltrails.com/explore/trail/romania/covasna/traseu-mtb-ride" target="_blank">route 2</a>, <a href="https://www.alltrails.com/explore/trail/romania/prahova/piatra-arsa-to-sinaia-cycle-route" target="_blank">route 3</a>
+      </div>
+      <div>
+        <strong>Graphic: </strong> @maptheclouds
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <script src="../js/d3/d3.v5.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    
+  </body>
+</html>
