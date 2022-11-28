@@ -333,6 +333,11 @@ p {
 }
 
 @media screen and (max-width: 500px) {
+  .nav--navigation {
+
+    top: 10%;
+   }
+
   .nav--gridContainer {
     width: 87.23404%;
     padding: 24px 0 0;
