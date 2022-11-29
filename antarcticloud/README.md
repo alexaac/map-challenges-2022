@@ -12,7 +12,7 @@ Antarctic Cloud ☁️
 
 ### Description
 
-200m elevation.
+200m resolution.
 
 Liu, H., K. C. Jezek, B. Li, and Z. Zhao. 2015. Radarsat Antarctic Mapping Project Digital Elevation Model, Version 2. [Indicate subset used]. Boulder, Colorado USA. NASA National Snow and Ice Data Center Distributed Active Archive Center. doi: http://dx.doi.org/10.5067/8JKNEW6BFRVD. [29-11-2022].
 
