@@ -12,8 +12,6 @@ Polymer Clay Earth 🌍
 
 ### Description
 
-România heights
-
 ### Data sources
 
 [Sculpted Gifts](https://www.instagram.com/sculptedgifts)
