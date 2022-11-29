@@ -1,6 +1,6 @@
 import * as THREE from '../../js/three/build/three.module.js';
 import { OrbitControls } from '../../js/three/OrbitControls.js';
-import { EXRLoader } from './EXRLoader.js';
+// import { EXRLoader } from '../../js/three/EXRLoader.js';
 
 /////////////////////////// ThreeJS ///////////////////////////////
 /**
@@ -192,7 +192,7 @@ const promises = [d3.json('data/world.json')];
 
 Promise.all(promises).then((data) => {
   const world = data[0];
-  console.log(world);
+  // console.log(world);
 
   countries = topojson.feature(world, {
     type: 'GeometryCollection',
