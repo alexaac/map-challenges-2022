@@ -4,7 +4,7 @@
 
 ### Title
 
-Cluj Forests 🌳🌲
+Breaking Bad in Albuquerque
 
 ### Demo
 
@@ -12,9 +12,7 @@ Cluj Forests 🌳🌲
 
 ### Description
 
-QGIS is a free and open-source cross-platform desktop geographic information system (GIS) application that supports viewing, editing, printing, and analysis of geospatial data.
-
-Here's a map made in QGIS, and visualized using ThreeJS: Cluj County, România map with a focus on forests.
+Press "W", "A", "S", "D" keys to drive the truck
 
 ### Data sources
 
