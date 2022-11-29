@@ -4,7 +4,7 @@
 
 ### Title
 
-Map Scales
+Cluj County Folded Map
 
 ### Demo
 
@@ -12,7 +12,11 @@ Map Scales
 
 ### Description
 
+Cluj, România, 'Lord of the Rings' map style 🖤
+
 ### Data sources
+
+[OpenStreetMap](https://www.openstreetmap.org/about/)
 
 ### Inspiration
 
