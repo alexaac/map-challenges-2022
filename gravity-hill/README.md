@@ -16,6 +16,10 @@ A gravity hill, also known as a magnetic hill, mystery hill, mystery spot, gravi
 
 ### Data sources
 
+[Mysterious Road Defies Gravity in Pittsburgh](https://youtu.be/M2lAqYZ6N5o)
+
+[Wikipedia](https://en.wikipedia.org/wiki/Gravity_hill)
+
 ### Inspiration
 
 ### TODO
