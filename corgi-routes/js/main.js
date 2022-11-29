@@ -437,8 +437,8 @@ map.on('load', async () => {
   const addPopup = (coordinates, index, name) => {
     index = index || 0;
     // random number from 1 to 10
-    const randomNo = Math.floor(Math.random() * 10 + 1);
-    const iconSize = [50 + randomNo, 50 + randomNo];
+    const randomNo = Math.floor(Math.random() * 6 + 1);
+    // const iconSize = [50 + randomNo, 50 + randomNo];
     // const iconSize = [53 + index, 53 + index];
 
     // create a DOM element for the marker
@@ -450,9 +450,17 @@ map.on('load', async () => {
     // img.style.backgroundImage = `url(https://placekitten.com/g/${iconSize.join(
     //   '/'
     // )}/)`;
-    img.style.backgroundImage = `url(http://placecorgi.com/${iconSize.join(
-      '/'
-    )}/)`;
+
+    // Removed until placecorgi works
+    // img.style.backgroundImage = `url(http://placecorgi.com/${iconSize.join(
+    //   '/'
+    // )}/)`;
+
+    img.style.backgroundImage = `url(./assets/textures/corgi${randomNo}.jpg)`;
+    img.style.backgroundSize = 'cover';
+    img.style.backgroundRepeat = 'no-repeat';
+    img.style.backgroundPosition = 'center center';
+
     // img.style.backgroundImage = `url(https://picsum.photos/${iconSize[0]}/)`;
 
     img.style.width = '50px';
