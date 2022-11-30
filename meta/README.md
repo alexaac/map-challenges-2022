@@ -4,15 +4,15 @@
 
 ### Title
 
-Duotone
+Meta
 
 ### Demo
 
-[https://maptheclouds.com/playground/30-day-map-challenge-2022/duotone/](https://maptheclouds.com/playground/30-day-map-challenge-2022/duotone/)
+[https://maptheclouds.com/playground/30-day-map-challenge-2022/meta/](https://maptheclouds.com/playground/30-day-map-challenge-2022/meta/)
 
 ### Description
 
-Too lazy to build my own script, so cheating a bit. Use https://duotones.co/ to apply this effect for any of your maps.
+A big shout-out to the #ThreeJS and OSGeo community. With the free resources and code, I learned and experimented more.
 
 ### Data sources
 
