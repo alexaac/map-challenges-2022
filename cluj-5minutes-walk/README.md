@@ -4,7 +4,7 @@
 
 ### Title
 
-Cluj-Napoca 5minutes walk
+Cluj-Napoca 5minutes walk 🚶
 
 ### Demo
 

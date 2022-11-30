@@ -31,7 +31,7 @@ gui.addColor(parameters, 'materialColor').onChange(() => {
  * Base
  */
 // Canvas
-const canvas = document.querySelector('canvas.webgl');
+const canvas = document.querySelector('canvas.main-webgl');
 
 // Scene
 const scene = new THREE.Scene();
@@ -46,7 +46,7 @@ const geometry = new THREE.PlaneBufferGeometry(imgWidth, imgHeight, 1, 1); // 14
 // const geometry = new THREE.PlaneBufferGeometry(2, 1.3);
 
 // Meshes
-const objectsDistance = 3;
+const objectsDistance = 2;
 let index = 0;
 let xOffset = 0.5;
 const sectionMeshes = [];
@@ -81,14 +81,14 @@ data.forEach((elem, i) => {
     } else {
       demoLink = `https://maptheclouds.com/playground/30-day-map-challenge-2022/${elem.name}/`;
     }
-    const demoImg = textureLoader.load(`./data/${elem.name}.png`);
-    const demoMp4 = `./data/${elem.name}.mp4`;
+    const demoImg = textureLoader.load(`./${elem.name}/img/og_1400_900.png`);
+    const demoMp4 = `./${elem.name}/img/demo.mp4`;
 
     const section = document.createElement('section');
     section.className = 'section';
     section.id = `section-${index}`;
     const h2 = document.createElement('h2');
-    h2.innerText = elem.name;
+    h2.innerText = elem.title;
     section.appendChild(h2);
     div.appendChild(section);
 
@@ -118,17 +118,23 @@ data.forEach((elem, i) => {
 });
 
 sectionMeshes[0].visible = false;
+sectionMeshes[1].visible = false;
 // Animate overlay
 gsap.to(sectionMeshes[0], {
   delay: 6,
   duration: 30,
   visible: true,
 });
-gsap.to(sectionMeshes[0].rotation, {
-  delay: 0,
-  duration: 10,
-  y: -0.5,
+gsap.to(sectionMeshes[1], {
+  delay: 7,
+  duration: 30,
+  visible: true,
 });
+// gsap.to(sectionMeshes[0].rotation, {
+//   delay: 0,
+//   duration: 10,
+//   y: -0.5,
+// });
 
 const firstH2 = document.querySelector('#section-0');
 gsap.timeline().to(firstH2, {
@@ -324,19 +330,19 @@ const handleMouseMove = (event) => {
 
   const intersects = raycaster.intersectObjects(sectionMeshes);
 
-  tooltip.style.visibility = 'hidden';
+  // tooltip.style.visibility = 'hidden';
 
   if (intersects[0]) {
     currentIntersect = intersects[0];
 
     if (intersects[0].object.properties.description) {
-      tooltip.innerHTML = intersects[0].object.properties.description;
-      tooltip.style.visibility = 'visible';
-      tooltip.style.top = '50vh';
-      tooltip.style.left = '50vw';
+      // tooltip.innerHTML = intersects[0].object.properties.description;
+      // tooltip.style.visibility = 'visible';
+      // tooltip.style.top = '50vh';
+      // tooltip.style.left = '50vw';
 
       document.body.style.cursor = 'pointer';
-      tooltip.style.visibility = 'visible';
+      // tooltip.style.visibility = 'visible';
     }
 
     if (currentIntersect) {
@@ -374,15 +380,15 @@ const handleMouseMove = (event) => {
 
   for (const intersect of intersects) {
     gsap.to(intersect.object.scale, { x: 1.7, y: 1.7 });
-    gsap.to(intersect.object.rotation, { y: -0.5 });
-    gsap.to(intersect.object.position, { z: -0.9 });
+    // gsap.to(intersect.object.rotation, { y: -0.2 });
+    // gsap.to(intersect.object.position, { z: -0.9 });
   }
 
   for (const mesh of sectionMeshes) {
     if (!intersects.find((intersect) => intersect.object === mesh)) {
       gsap.to(mesh.scale, { x: 1, y: 1 });
-      gsap.to(mesh.rotation, { y: 0 });
-      gsap.to(mesh.position, { z: 0 });
+      // gsap.to(mesh.rotation, { y: 0 });
+      // gsap.to(mesh.position, { z: 0 });
     }
   }
 };
