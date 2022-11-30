@@ -461,7 +461,7 @@ export class BufferShader {
     });
     // this.scene = new THREE.Scene();
     this.scene.add(
-      new THREE.Mesh(new THREE.PlaneBufferGeometry(2, 2), this.material)
+      new THREE.Mesh(new THREE.PlaneBufferGeometry(3, 3), this.material)
     );
   }
 }

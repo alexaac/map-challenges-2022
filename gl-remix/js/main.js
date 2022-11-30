@@ -25,7 +25,7 @@ const mouse = new THREE.Vector2();
 const isMobile = window.innerWidth < 703;
 const shiftRightPercent = 0; //isMobile ? 0 : 0.4;
 const shiftBottomPercent = 0; // isMobile ? 0.5 : 0.1;
-const cameraZoom = isMobile ? 15 : 12;
+const cameraZoom = isMobile ? 1 : 0.55;
 
 const sections = document.querySelectorAll('.content--fixedPageContent');
 gsap.to(sections[0], {
@@ -279,7 +279,7 @@ const camera = new THREE.PerspectiveCamera(
 
 scene.add(camera);
 
-camera.position.set(0, 0, 0.68);
+camera.position.set(0, 0, cameraZoom);
 
 // camera.position.set(-100, 30, 7 * cameraZoom);
 
