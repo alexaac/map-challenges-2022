@@ -31,3 +31,14 @@ data.forEach((elem, i) => {
     imgDiv.appendChild(a);
   }
 });
+
+const a = document.createElement('a');
+a.href = `https://maptheclouds.com/playground/30-day-map-challenge-2022/meta/assets/textures/unnamed.gif`;
+
+const img = document.createElement('img');
+img.src = `assets/textures/unnamed.gif`;
+img.className = 'post-img';
+img.style = 'width:100px';
+
+a.appendChild(img);
+imgDiv.appendChild(a);
