@@ -46,7 +46,7 @@ const geometry = new THREE.PlaneBufferGeometry(imgWidth, imgHeight, 1, 1); // 14
 // const geometry = new THREE.PlaneBufferGeometry(2, 1.3);
 
 // Meshes
-const objectsDistance = 2;
+const objectsDistance = 2.5;
 let index = 0;
 let xOffset = 0.5;
 const sectionMeshes = [];
@@ -118,15 +118,9 @@ data.forEach((elem, i) => {
 });
 
 sectionMeshes[0].visible = false;
-sectionMeshes[1].visible = false;
 // Animate overlay
 gsap.to(sectionMeshes[0], {
   delay: 6,
-  duration: 30,
-  visible: true,
-});
-gsap.to(sectionMeshes[1], {
-  delay: 7,
   duration: 30,
   visible: true,
 });

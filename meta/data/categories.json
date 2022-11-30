@@ -1,0 +1,308 @@
+[
+  {
+    "name": "globe-airports",
+    "title": "1. Points",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " OpenFlights World Airports ✈️  ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "hongkong-crosshatch",
+    "title": "2. Lines",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Hong Kong 香港  ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "funky-city",
+    "title": "3. Polygons",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Funky City 🏙️  ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "cluj-forests",
+    "title": "4. Colour Friday: Green",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Cluj Forests 🌳🌲  ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "ukraine",
+    "title": "5. Ukraine",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Stop the War!  ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "globe-airlines",
+    "title": "6. Network",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " OpenFlights World Airlines ✈️  ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "windy-sky",
+    "title": "7. Raster",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Global Wind Power Forecast 🌬️  ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "cluj-globe",
+    "title": "8. Data: OpenStreetMap",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Cluj Globe 🌐  ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "star-map",
+    "title": "9. Space",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Star Map 🌌 ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "breaking-bad",
+    "title": "10. A Bad Map",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Breaking Bad in Albuquerque ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "red-light",
+    "title": "11. Colour Friday: Red",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Red Light District 💕 ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "map-scales",
+    "title": "12. Scale",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Map Scales ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "cluj-5minutes-walk",
+    "title": "13. 5 minute map",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Cluj-Napoca 5minutes walk 🚶 ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "basalt-cities",
+    "title": "14. Hexagons",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Basalt Cities in România ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "cheesy-planets",
+    "title": "15. Food/drink",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Cheesy Planets 🧀 ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "grayscale",
+    "title": "16. Minimal",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Grayscale ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "sculpted-gifts",
+    "title": "17. A map without a computer",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Polymer Clay Earth 🌍 ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "pale-blue-dot",
+    "title": "18. Colour Friday: Blue",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Pale Blue Dot ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "fireflies-globe",
+    "title": "19. Globe",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Fireflies Globe ✨ ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "aiudului-gorges",
+    "title": "20. My favourite",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " My favourite climbing/camping place ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "romania-hex",
+    "title": "21. Data - Kontur Population Dataset",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Romania - Population Density ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "gravity-hill",
+    "title": "22. NULL",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Gravity Hill - Pittsburgh, Pennsylvania ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "corgi-routes",
+    "title": "23. Movement",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Corgi Routes 🐶 ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "fantasy-cluj-fold",
+    "title": "24. Fantasy",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Cluj County Folded Map 🐉 🖤 ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "duotone",
+    "title": "25. Colour Friday: Two Colours",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Duotone ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "pangaea-island",
+    "title": "26. Island(s)",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Pangaea 🌍 ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "fuel-songs",
+    "title": "27. Music",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Change in fossil fuel consumption in 2021. 🏭 Sound on. 🔊 ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "dublin-lidar",
+    "title": "28. 3D",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Dublin, Ireland in 3D 🌆 ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "antarcticloud",
+    "title": "29. Out of My Comfort Zone",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Antarctic Cloud ☁️ ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "name": "gl-remix",
+    "title": "Day 30. Remix",
+    "type": "child",
+    "parent": "30-day-map-challenge-2022",
+    "icon": "",
+    "description": " Pale Blue Dot - Remix! ",
+    "examples": [],
+    "finished": true
+  },
+  {
+    "title": "30 Day Map Challenge 2022",
+    "type": "parent",
+    "name": "30-day-map-challenge-2022",
+    "description": " 2022 "
+  }
+]

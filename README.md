@@ -8,7 +8,11 @@ Do not use in production :D
 
 ### Gallery
 
-https://maptheclouds.com/playground/30-day-map-challenge-2022/metamapping/
+https://maptheclouds.com/playground/30-day-map-challenge-2022/meta/
+
+### Interactive
+
+https://maptheclouds.com/playground/30-day-map-challenge-2022/
 
 ### Project Setup
 
