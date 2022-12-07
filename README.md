@@ -6,6 +6,10 @@
 
 Do not use in production :D
 
+### Video
+
+https://maptheclouds.com/playground/30-day-map-challenge-2022/meta/img/mapchall_2022.mp4
+
 ### Gallery
 
 https://maptheclouds.com/playground/30-day-map-challenge-2022/meta/
