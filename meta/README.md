@@ -1,6 +1,6 @@
 ### Project
 
-#30DayMapChallenge 2022 Day 25. Colour Friday: Two Colours
+#30DayMapChallenge 2022 Wrap-up
 
 ### Title
 
