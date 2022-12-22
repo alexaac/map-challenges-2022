@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Make Snow</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <!-- <script src="./js/libs/maplibre-gl.js"></script> -->
+    <link rel="stylesheet" href="./css/mapbox-gl-2.10.0.css" />
+    <!-- <link href="./css/maplibre-gl.css" rel="stylesheet" /> -->
+    <link href="./css/maptiler-geocoder.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="map"></div>
+    <!-- <div id="hour"></div> -->
+
+    <div class="info">
+      <strong>Click on the map to make snow!</strong>&nbsp;<span
+        id="mag"
+      ></span>
+    </div>
+
+    <script
+      src="./js/libs/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- <script src="https://unpkg.com/three@0.106.2/build/three.min.js"></script> -->
+    <script src="./js/build/three.min.js"></script>
+
+    <script src="./js/libs/m4.js"></script>
+    <script src="./js/libs/turf.min.js"></script>
+
+    <script src="./js/libs/maptiler-geocoder.js"></script>
+
+    <script src="./js/libs/mapbox-gl-2.10.0.js"></script>
+    <script src="./js/libs/suncalc.js"></script>
+    <script src="./js/libs/gl-matrix.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
