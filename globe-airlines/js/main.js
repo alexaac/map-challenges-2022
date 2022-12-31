@@ -591,7 +591,7 @@ function getCurve(coords) {
 
           // console.log('-------------------------');
           splineGeometry.setDrawRange(0, 5000);
-          drawDirectedAnimatedLine({ reverse: true });
+          //drawDirectedAnimatedLine({ reverse: true });
         } else {
           // console.log('------------------0000000000000000000');
          // setTimeout(function () {
