@@ -574,11 +574,11 @@ function getCurve(coords) {
       const timeElapsed = performance.now() - startTime;
 
       // Animate the curve for 2.5 seconds
-      const progress = timeElapsed / 8000;
+      const progress = timeElapsed / 16000;
       // console.log('progress ', progress);
 
       // Arcs are made up of roughly 3000 vertices
-      drawRangeCount = (reverse ? 1 - progress : progress) * 5000;
+      drawRangeCount = (reverse ? 1 - progress : progress) * 10000;
       // console.log(drawRangeCount);
 
       if (progress < 0.999) {
@@ -590,7 +590,7 @@ function getCurve(coords) {
           startTime = performance.now();
 
           // console.log('-------------------------');
-          splineGeometry.setDrawRange(0, 5000);
+          splineGeometry.setDrawRange(0, 10000);
           //drawDirectedAnimatedLine({ reverse: true });
         } else {
           // console.log('------------------0000000000000000000');
