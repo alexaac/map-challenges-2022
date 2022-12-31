@@ -589,16 +589,15 @@ function getCurve(coords) {
         if (reverse === false) {
           startTime = performance.now();
 
-          console.log('-------------------------');
+//           console.log('-------------------------');
           splineGeometry.setDrawRange(0, 10000);
           drawDirectedAnimatedLine({ reverse: true });
-          console.log('------------------- aici';
         } else {
           // console.log('------------------0000000000000000000');
-         // setTimeout(function () {
-         //   splinesGroup.remove(splines);
-         //   document.querySelector('#airport-name').innerHTML = '';
-         // }, 500);
+         setTimeout(function () {
+           splinesGroup.remove(splines);
+           document.querySelector('#airport-name').innerHTML = '';
+         }, 5000);
         }
       }
     };
