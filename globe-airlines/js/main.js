@@ -594,10 +594,10 @@ function getCurve(coords) {
           drawDirectedAnimatedLine({ reverse: true });
         } else {
           // console.log('------------------0000000000000000000');
-          setTimeout(function () {
-            splinesGroup.remove(splines);
-            document.querySelector('#airport-name').innerHTML = '';
-          }, 500);
+         // setTimeout(function () {
+         //   splinesGroup.remove(splines);
+         //   document.querySelector('#airport-name').innerHTML = '';
+         // }, 500);
         }
       }
     };
