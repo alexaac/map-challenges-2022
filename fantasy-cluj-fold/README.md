@@ -12,7 +12,7 @@ Cluj County Folded Map 🐉 🖤
 
 ### Description
 
-Cluj, România, 'Lord of the Rings' map style 🖤
+Cluj, România, fantasy map style 🖤
 
 ### Data sources
 
