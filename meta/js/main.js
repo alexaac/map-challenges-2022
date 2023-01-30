@@ -14,8 +14,6 @@ const getData = async (url) => {
 };
 
 // Get the data
-
-// Get the data
 const data = await getData('data/categories.json');
 
 data.forEach((elem, i) => {

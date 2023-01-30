@@ -10,7 +10,7 @@ var map = new maplibregl.Map({
   // style:
   //   'https://api.maptiler.com/maps/hybrid/style.json?key=wSVUkjoWKTD8fUSyzJd5',
   center: [longitude, latitude],
-  zoom: 16,
+  zoom: window.innerWidth < 750 ? 15 : 16,
   pitch: 55,
   bearing: -20,
   antialias: true,
