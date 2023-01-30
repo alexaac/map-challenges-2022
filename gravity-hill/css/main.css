@@ -204,7 +204,7 @@ p {
   line-height: 80px;
   letter-spacing: -3px;
   font-size: calc(70px + 1 * (100vw - 1024px) / 416);
-  line-height: calc(64px + 30 * (100vw - 1024px) / 416);
+  /* line-height: calc(44px + 30 * (100vw - 1024px) / 416); */
 }
 
 .content--subCopy {
