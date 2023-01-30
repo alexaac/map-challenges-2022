@@ -4,17 +4,25 @@ const pointLongitude = -80.02605,
 const longitude = -80.02895718904472,
   latitude = 40.61201143180975;
 
+const isMobile = window.innerWidth < 750;
+
 var map = new maplibregl.Map({
   container: 'map',
   style: './styles/osm_liberty.json',
   // style:
   //   'https://api.maptiler.com/maps/hybrid/style.json?key=wSVUkjoWKTD8fUSyzJd5',
   center: [longitude, latitude],
-  zoom: window.innerWidth < 750 ? 15 : 16,
+  zoom: isMobile ? 15 : 16,
   pitch: 55,
   bearing: -20,
   antialias: true,
 });
+
+if (isMobile) {
+  document.querySelector('.info1').style.display = 'none';
+  document.querySelector('.info2').style.display = 'none';
+  document.querySelector('.info3').style.display = 'none';
+}
 
 // create a DOM element for the marker
 var el = document.createElement('div');

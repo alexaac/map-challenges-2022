@@ -303,17 +303,13 @@ p {
 @media screen and (max-width: 768px) {
   .content--subCopy {
     margin: 80px 0 0;
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
-    /* background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0)
-    ); */
+    /* background-image: linear-gradient( to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) ); */
     position: fixed;
-    bottom: 10%;
+    bottom: 20%;
     left: 0;
   }
   .nav--gridContainer {
@@ -354,6 +350,10 @@ p {
 
 @media screen and (max-width: 500px) {
   .nav--gridContainer {
+    flex-direction: column;
+  }
+
+  .nav--gridContainer {
     width: 87.23404%;
     padding: 24px 0 0;
   }
@@ -372,7 +372,7 @@ p {
   }
   .content--contentWrapper h1 {
     font-family: 'Baskerville Bold', Helvetica, Arial, sans-serif;
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 600;
     line-height: 48px;
   }
