@@ -309,7 +309,7 @@ p {
     padding: 1rem;
     /* background-image: linear-gradient( to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) ); */
     position: fixed;
-    bottom: 20%;
+    bottom: 15%;
     left: 0;
   }
   .nav--gridContainer {
