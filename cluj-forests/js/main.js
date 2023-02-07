@@ -2,12 +2,15 @@ import * as THREE from '../../js/three/build/three.module.js';
 import { OrbitControls } from '../../js/three/OrbitControls.js';
 import * as dat from '../../js/libs/lil-gui.module.min.js';
 
-import dVertexShader from './shaders/displacement/vertex.js';
-import dFragmentShader from './shaders/displacement/fragment.js';
 import firefliesVertexShader from '../../js/shaders/fireflies/vertex.js';
 import firefliesFragmentShader from '../../js/shaders/fireflies/fragment.js';
 
 const isMobile = window.innerWidth < 703;
+console.log(isMobile);
+if (isMobile) {
+  // hide long text
+  document.querySelector('.content--subCopy').style.display = 'none';
+}
 
 /**
  * Loaders
@@ -270,7 +273,7 @@ camera.position.z = 2;
 scene.add(camera);
 
 // Controls
-const controls = new OrbitControls(camera, canvas);
+// const controls = new OrbitControls(camera, canvas);
 // controls.enableDamping = true;
 // controls.enableZoom = false;
 
