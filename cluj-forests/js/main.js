@@ -9,7 +9,8 @@ const isMobile = window.innerWidth < 703;
 console.log(isMobile);
 if (isMobile) {
   // hide long text
-  document.querySelector('.content--subCopy').style.display = 'none';
+  document.querySelector('#info1').style.display = 'none';
+  document.querySelector('#info2').style.display = 'none';
 }
 
 /**
