@@ -97,7 +97,7 @@ canvas#webgl {
   top: 0;
   right: 0;
   outline: none;
-
+  cursor: url('./static/cursor.png'), pointer;
   z-index: 1;
 }
 

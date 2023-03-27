@@ -1,6 +1,6 @@
 import * as THREE from '../../js/three/build/three.module.js';
 import { OrbitControls } from '../../js/three/OrbitControls.js';
-// import { FlyControls } from '../../js/three/FlyControls.js';
+import { FlyControls } from '../../js/three/FlyControls.js';
 import * as dat from '../../js/libs/lil-gui.module.min.js';
 
 const isMobile = window.innerWidth < 703;
@@ -135,8 +135,8 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
  *
  */
 
-const controls = new OrbitControls(camera, canvas);
-// const controls = new FlyControls(camera, canvas);
+// const controls = new OrbitControls(camera, canvas);
+const controls = new FlyControls(camera, canvas);
 controls.movementSpeed = 0.1;
 controls.domElement = renderer.domElement;
 controls.rollSpeed = Math.PI / 24;
