@@ -29,7 +29,7 @@ body {
   overflow: hidden;
   /* background-color: initial; */
   background: rgb(27, 27, 31);
-  color: #fff;
+  color: #4999d383;
   /* color: rgb(181, 181, 194); */
 }
 
@@ -105,7 +105,7 @@ p {
   flex: 0 0 50%;
   font-family: EarthSpirit, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #fff;
+  color: #4999d383;
 }
 
 .content--count {
@@ -208,11 +208,10 @@ p {
   font-weight: 900;
   line-height: 80px;
   /* letter-spacing: -3px; */
-  font-size: calc(50px + 18 * (100vw - 1024px) / 416);
-  line-height: calc(44px + 30 * (100vw - 1024px) / 416);
+  font-size: calc(10px + 14 * (100vw - 1024px) / 416);
+  line-height: calc(24px + 30 * (100vw - 1024px) / 416);
   color: #4999d383;
-  /* text-shadow: 0 1.5px 0 #4273ba, 1.5px 0 0 #4273ba, 0 -1.5px 0 #4273ba, */
-    -1.5px 0 0 #4273ba;
+  /* text-shadow: 0 1.5px 0 #4273ba, 1.5px 0 0 #4273ba, 0 -1.5px 0 #4273ba,; */
 }
 
 .content--subCopy {
@@ -256,7 +255,6 @@ p {
   /* max-width: 1216px; */
   margin: 0 auto;
   padding: 48px 0 0;
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -281,9 +279,9 @@ p {
     font-size: 80px;
     font-weight: 600;
     line-height: 72px;
-    letter-spacing: -2px;
-    font-size: calc(56px + 14 * (100vw - 768px) / 256);
-    line-height: calc(48px + 16 * (100vw - 768px) / 256);
+    /* letter-spacing: -2px; */
+    font-size: calc(16px + 14 * (100vw - 768px) / 256);
+    line-height: calc(38px + 16 * (100vw - 768px) / 256);
   }
   .content--subCopy {
     margin: 72px 0 0;
@@ -319,9 +317,9 @@ p {
   }
   .content--contentWrapper h1 {
     font-family: EarthSpirit, Helvetica, Arial, sans-serif;
-    font-size: 64px;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 56px;
+    line-height: 26px;
   }
   .content--subCopy {
     margin: 64px 0 32px;
@@ -402,7 +400,7 @@ p {
 .below {
   font-family: EarthSpirit, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #ffffff;
+  color: #4999d383;
 }
 
 .below a {

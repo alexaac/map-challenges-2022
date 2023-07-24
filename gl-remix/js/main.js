@@ -25,7 +25,7 @@ const mouse = new THREE.Vector2();
 const isMobile = window.innerWidth < 703;
 const shiftRightPercent = 0; //isMobile ? 0 : 0.4;
 const shiftBottomPercent = 0; // isMobile ? 0.5 : 0.1;
-const cameraZoom = isMobile ? 1 : 0.55;
+const cameraZoom = isMobile ? 1.6 : 0.7;
 
 const sections = document.querySelectorAll('.content--fixedPageContent');
 gsap.to(sections[0], {
