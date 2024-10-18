@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta charset="UTF-8" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#30DayMapChallenge 2022 Day 1. Points</title>
+
+    <meta property="og:title" content="#30DayMapChallenge 2022 Day 1. Points" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/globe-airports"
+    />
+    <meta property="og:description" content="#30DayMapChallenge on Twitter" />
+    <meta property="article:publisher" content="https://maptheclouds.com" />
+    <meta property="article:section" content="Graphic" />
+    <meta property="article:tag" content="Graphic" />
+    <meta
+      property="og:image"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/globe-airports/img/og_1400_900.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="900" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:image"
+      content="https://maptheclouds.com/playground/30-day-map-challenge-2022/globe-airports/img/og_1400_900.png"
+    />
+    <meta property="twitter:site" content="@maptheclouds" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js" integrity="sha512-0bzaetZStCnsUgbCtGVxftzF/L32PNOnrMlYLXwBOKl8cUjTSSDfJVyyJsNwGoI0iE0WUqni2eEfO35kJjFj5g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  </head>
+
+  <body>
+    
+    <canvas class="webgl" id="webgl"></canvas>
+    <div class="main--contentWrapper no-pointer-events">
+      <div class="content--page" style="color: rgb(41, 22, 16);">
+        <div class="content--fixedPageContent" style="transform: translate3d(0px, 0px, 0px)"><div class="content--gridContainer">
+          <div class="content--contentWrapper">
+          <h1>OpenFlights World Airports ✈️ </h1>
+          <div class="content--subCopy">
+            
+            <div>
+
+              <p>OpenFlights Airports Database contains over 10,000 airports, train stations and ferry terminals spanning the globe. 
+              
+                Feel free to query all <strong><span id="airport-no"></span></strong> airports and extra points on this map.</p>
+
+                <p><span id="infoEl1"></span></p>
+                <p><span id="infoEl2"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div></div>
+
+    
+    <div class="side-pannel side-pannel--left">
+      <div class="control control-group">
+          <a id="rotate-globe" class="play-icon" href="#" title="Rotate"></a>
+          <a id="stop-globe" class="pause-icon hidden" href="#" title="Stop"></a>
+      </div>
+    </div>
+
+    <div id="markerLabel" class="hidden">
+      <button id="closeButton">X</button>
+      <div class="text" id="idNum"></div>
+      <div class="text" id="magnitude"></div>
+      <div class="text" id="coordinates"></div>
+    </div>
+
+
+    <div class="below">
+      <div>
+        <strong>Data: </strong> 
+        <a href="https://openflights.org/data.html">OpenFlights Airports Database</a>
+      </div>
+      <div>
+        <strong>Graphic: </strong> @maptheclouds
+      </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="../js/hide.js"></script>    
+    
+  </body>
+</html>

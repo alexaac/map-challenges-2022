@@ -168,7 +168,7 @@ let globalUniforms = {
   uNoiseTexture: { value: noiseTexture },
   uSize: { value: 0.005 * renderer.getPixelRatio() },
 };
-// markerCount = airports.length;
+markerCount = airports.length;
 let markerInfo = []; // information on markers
 
 let gMarker = new THREE.PlaneGeometry(0.005, 0.005);
