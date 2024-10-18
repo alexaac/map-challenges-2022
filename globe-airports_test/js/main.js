@@ -15,7 +15,7 @@ const shiftRightPercent = isMobile ? 0 : 0.4;
 const shiftBottomPercent = isMobile ? 0.2 : 0.1;
 const cameraZoom = isMobile ? 30 : 18;
 const globeRadius = 5.5;
-let markerCount = 200000;
+let markerCount = 2000000;
 
 const sections = document.querySelectorAll('.content--fixedPageContent');
 gsap.to(sections[0], {
