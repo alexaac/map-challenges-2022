@@ -171,7 +171,7 @@ let globalUniforms = {
 // markerCount = airports.length;
 let markerInfo = []; // information on markers
 
-let gMarker = new THREE.PlaneGeometry(0.01, 0.01);
+let gMarker = new THREE.PlaneGeometry(0.005, 0.005);
 
 // Material
 const mMarker = new THREE.MeshBasicMaterial({
