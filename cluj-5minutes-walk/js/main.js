@@ -1,4 +1,4 @@
-import apiKey from './apiKey.js';
+import { orsApiKey, stadiaApiKey } from './apiKey.js';
 
 // const longitude = 4.8959624,
 //   latitude = 52.3711013;
@@ -10,7 +10,7 @@ window.onload = function () {
   const node = document.getElementById('isochrones');
 
   const Isochrones = new Openrouteservice.Isochrones({
-    api_key: apiKey,
+    api_key: orsApiKey,
   });
 
   var map = L.map('map', {
@@ -25,10 +25,14 @@ window.onload = function () {
     zoomSnap: 0.5,
   }).setView([latitude, longitude], 14);
 
-  // L.tileLayer('https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-  L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-  }).addTo(map);
+  L.tileLayer(
+    `https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png?api_key=${stadiaApiKey}`,
+    {
+      maxZoom: 20,
+      attribution:
+        '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://stamen.com/">Stamen Design</a>, &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>',
+    }
+  ).addTo(map);
 
   //the geojson data:
   var data = {
@@ -71,34 +75,52 @@ window.onload = function () {
     getIsochrones([e.latlng.lng, e.latlng.lat]);
   }
 
+  /** Turn nested isochrones into rings (Turf v7+ needs a FeatureCollection). */
+  function buildIsochroneRings(features) {
+    const sorted = [...features].sort(
+      (a, b) => a.properties.value - b.properties.value
+    );
+
+    if (sorted.length === 1) {
+      return sorted;
+    }
+
+    const rings = [];
+    for (let i = 0; i < sorted.length - 1; i++) {
+      const ring = turf.difference(
+        turf.featureCollection([sorted[i + 1], sorted[i]])
+      );
+      if (ring) {
+        ring.properties = { ...sorted[i + 1].properties };
+        rings.push(ring);
+      }
+    }
+    rings.push(sorted[0]);
+    return rings;
+  }
+
   function getIsochrones(point) {
     Isochrones.calculate({
       profile: 'foot-walking',
       locations: [point],
-      area_units: 'm',
       range: [300, 600, 900, 1200, 1500, 1800],
-      // range: [300, 600, 900],
       range_type: 'time',
     })
       .then(function (data) {
         console.log(data);
 
+        if (!data.features || data.features.length === 0) {
+          console.warn('No isochrone features returned from ORS');
+          return;
+        }
+
         map.eachLayer(function (layer) {
           if (layer.id === 'access') {
-            // it's the access layer
             map.removeLayer(layer);
           }
         });
 
-        var difference = [];
-        for (let i = 0; i < data.features.length - 1; i++) {
-          difference.push(
-            turf.difference(data.features[i + 1], data.features[i])
-          );
-        }
-
-        difference.push(data.features[0]);
-        data.features = difference;
+        data.features = buildIsochroneRings(data.features);
 
         let access = new L.geoJson(data, {
           onEachFeature: function (feature, layer) {
